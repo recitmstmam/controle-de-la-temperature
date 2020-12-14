@@ -14,10 +14,10 @@ basic.forever(function () {
     Température = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P0) + 2
     basic.pause(100)
     radio.sendValue("T ", Température)
-    // Ajuster cette valeur en fonction de vos paramètres expérimentaux
+    // Ajuster cette valeur en fonction de vos paramètres expérimentaux. Ici, la fenêtre ouvre lorsque la température dépasse 25 °C.
     if (Température >= 25) {
         // Auster cette valeur de l'angle d'ouverture pour que la fenêtre reste ouverte sans courant.
-        while (Angle_fenetre > 35) {
+        while (Angle_fenetre > 45) {
             Angle_fenetre += -1
             servos.P1.setAngle(Angle_fenetre)
             basic.pause(15)
