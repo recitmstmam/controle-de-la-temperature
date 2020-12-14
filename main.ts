@@ -23,26 +23,17 @@ let range2: neopixel.Strip = null
 let range: neopixel.Strip = null
 let pourcentage = 0
 let sol = 0
-let Température = 0
 let minutes = 0
+let time = ""
 let heure = 0
 let adjust = 0
-let time = ""
+let Température = 0
 radio.setGroup(1)
-led.setBrightness(255)
-time = ""
-adjust = 0
-heure = 7
-minutes = 15
 Température = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P0)
 let Angle_fenetre = 160
-let strip = neopixel.create(DigitalPin.P12, 40, NeoPixelMode.RGB)
-strip.showColor(neopixel.colors(NeoPixelColors.Black))
 servos.P1.setAngle(Angle_fenetre)
-servos.P2.setAngle(0)
 basic.pause(2000)
 servos.P1.stop()
-servos.P2.stop()
 basic.forever(function () {
     pins.digitalWritePin(DigitalPin.P7, 1)
     basic.pause(100)
@@ -106,6 +97,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+    let strip: neopixel.Strip = null
     if (heure == 17 && minutes == 0) {
         range = strip.range(0, 20)
         range2 = strip.range(20, 20)
