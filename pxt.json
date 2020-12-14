@@ -1,0 +1,24 @@
+{
+    "name": "Controle de la temperature",
+    "version": "0.0.1",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "servo": "*",
+        "microphone": "*",
+        "smarthome-kit": "github:tinkertanker/pxt-smarthome#v1.0.8"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
