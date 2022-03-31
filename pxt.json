@@ -7,7 +7,7 @@
         "radio": "*",
         "servo": "*",
         "microphone": "*",
-        "smarthome-kit": "github:tinkertanker/pxt-smarthome#v1.0.8"
+        "smarthome-kit": "github:tinkertanker/pxt-smarthome#v2.2.1"
     },
     "files": [
         "main.blocks",
@@ -17,6 +17,10 @@
     "testFiles": [
         "test.ts"
     ],
+    "targetVersions": {
+        "target": "4.0.18",
+        "targetId": "microbit"
+    },
     "supportedTargets": [
         "microbit"
     ],
